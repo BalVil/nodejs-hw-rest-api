@@ -1,92 +1,65 @@
 [
   {
-    "id": "3",
+    "_id": "6333760025bf9cbe0d2396d3",
+    "name": "Allen Raymond",
+    "email": "nulla.ante@vestibul.co.uk",
+    "phone": "(992) 914-3792",
+    "favorite": false
+  },
+  {
+    "_id": "6333760025bf9cbe0d2396d5",
     "name": "Kennedy Lane",
     "email": "mattis.Cras@nonenimMauris.net",
-    "phone": "(542) 451-7038"
+    "phone": "(542) 451-7038",
+    "favorite": false
   },
   {
-    "id": "4",
+    "_id": "6333760025bf9cbe0d2396d6",
     "name": "Wylie Pope",
     "email": "est@utquamvel.net",
-    "phone": "(692) 802-2949"
+    "phone": "(692) 802-2949",
+    "favorite": true
   },
   {
-    "id": "5",
+    "_id": "6333760025bf9cbe0d2396d7",
     "name": "Cyrus Jackson",
     "email": "nibh@semsempererat.com",
-    "phone": "(501) 472-5218"
+    "phone": "(501) 472-5218",
+    "favorite": true
   },
   {
-    "id": "6",
+    "_id": "6333760025bf9cbe0d2396d8",
     "name": "Abbot Franks",
     "email": "scelerisque@magnis.org",
-    "phone": "(186) 568-3720"
+    "phone": "(186) 568-3720",
+    "favorite": true
   },
   {
-    "id": "7",
+    "_id": "6333760025bf9cbe0d2396d9",
     "name": "Reuben Henry",
     "email": "pharetra.ut@dictum.co.uk",
-    "phone": "(715) 598-5792"
+    "phone": "(715) 598-5792",
+    "favorite": true
   },
   {
-    "id": "8",
+    "_id": "6333760025bf9cbe0d2396da",
     "name": "Simon Morton",
     "email": "dui.Fusce.diam@Donec.com",
-    "phone": "(233) 738-2360"
+    "phone": "(233) 738-2360",
+    "favorite": true
   },
   {
-    "id": "9",
+    "_id": "6333760025bf9cbe0d2396db",
     "name": "Thomas Lucas",
     "email": "nec@Nulla.com",
-    "phone": "(704) 398-7993"
+    "phone": "(704) 398-7993",
+    "favorite": false
   },
   {
-    "id": "13",
-    "name": "John Smith 2",
-    "email": "gokol@g.mail",
-    "phone": "380508 6456"
-  },
-  {
-    "id": "14",
-    "name": "New 1",
-    "email": "new1.elementum@fg.net",
-    "phone": "(748)111"
-  },
-  {
-    "id": "15",
-    "name": "New 2",
-    "email": "new2.elementum@fg.net",
-    "phone": "228hjljk"
-  },
-  {
-    "id": "16",
-    "name": "New 3",
-    "email": "new3.elementum@fg.net",
-    "phone": "(333)3333333"
-  },
-  {
-    "id": "17",
-    "name": "Nem",
-    "email": "new4.elementum@fg.net",
-    "phone": "+(444) 444-5268"
-  },
-  {
-    "id": "18",
-    "name": "Ne",
-    "email": "new4.elementum@fg.net",
-    "phone": "+(444) 444-5268"
-  },
-  {
-    "id": "19",
-    "name": "Ne Jj",
-    "email": "new4.elementum@fg.net",
-    "phone": "+(444) 444-5268"
-  },
-  {
-    "id": "20",
-    "name": "Ne rtyrt5",
-    "email": "new4.elementum@fg.vo",
-    "phone": "+380509526398"
+    "_id": "6333760025bf9cbe0d2396dc",
+    "name": "Alec Howard",
+    "email": "Donec.elementum@scelerisquescelerisquedui.net",
+    "phone": "(748) 206-2688",
+    "favorite": true
   }
 ]

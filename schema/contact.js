@@ -30,6 +30,15 @@ const addSchema = Joi.object({
     }),
 }).required();
 
+const statusSchema = Joi.object({
+  favorite: Joi.boolean().required().messages({
+    "string.base": `favorite should be a type of boolean`,
+    "string.empty": `favorite must contain value`,
+    "any.required": `favorite is a required field`,
+  }),
+});
+
 module.exports = {
   addSchema,
+  statusSchema,
 };
