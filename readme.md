@@ -29,15 +29,14 @@ The API contains a full set of CRUD (Create, Read, Update, Delete) operations fo
 - `server.js` - The entry point to our application. This file defines our express server and connects it to MongoDB using mongoose.
 - `app.js` - This file requires routes and models that we will use in the application, as well as handling 404 error and 500 server error
 - `routes/` - This folder contains the route definitions for our API.
-- `models/` - This folder contains the model (service) to perform operations on the database.
+- `models/` - This folder contains the model (service) to perform operations on the database and the schema definitions for our Mongoose models
 - `controllers/` - This file contains the basic logic of working with our API.
-- `schema/` - This folder contains the schema definitions for our Mongoose models.
 - `helpers/` - This folder contains the functions that allow you to optimize code creation - repeatedly apply in different places. For example to work with try/catch, to handle RequestError.
 - `middlewares/` - This folder contains any middleware needed for the application such as handle data validation
 
 ## Error Handling
 
-<!-- In `helpers/RequestError.js`, we define a error-handling middleware for handling Mongoose's `ValidationError`. This middleware will respond with a 400, 401, 403, 404, 409 status code and format the response to have [error messages the clients can understand] -->
+In `middlewares/`, we define a error-handling middleware for handling Mongoose's `ValidationError`. This middleware will respond with a 400 status code and format the response to have error messages the clients can understand
 
 ## Authentication
 
@@ -45,9 +44,9 @@ app.js - web server on express and morgan and cors middlewares.
 
 Rautings to work with a collection of contacts:
 
-### Команди:
+### Commands:
 
-- `npm start` &mdash; старт сервера в режимі production
-- `npm run start:dev` &mdash; старт сервера в режимі розробки (development)
-- `npm run lint` &mdash; запустити виконання перевірки коду з eslint, необхідно виконувати перед кожним PR та виправляти всі помилки лінтера
-- `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
+- `npm start` &mdash; Server start in production mode
+- `npm run start:dev` &mdash; Server start in development mode
+- `npm run lint` &mdash; Run code checks with eslint - must be run before each PR and fix any linter errors
+- `npm lint:fix` &mdash; Same linter checker, but with automatic fixes for simple errors
