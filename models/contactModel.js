@@ -1,4 +1,25 @@
 const Joi = require("joi");
+const { Schema, model } = require("mongoose");
+
+const contactSchema = new Schema(
+  {
+    name: {
+      type: String,
+      required: [true, "Set name for contact"],
+    },
+    email: {
+      type: String,
+    },
+    phone: {
+      type: String,
+    },
+    favorite: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  { timestamps: true }
+);
 
 const addSchema = Joi.object({
   name: Joi.string()
@@ -28,8 +49,25 @@ const addSchema = Joi.object({
       "string.pattern.base": `phone has incorrect format (Valid formats: (123) 456-7890, (123)456-7890, 123-456-7890, 123.456.7890, 1234567890, +31636363634, 075-63546725)`,
       "any.required": `phone is a required field`,
     }),
+  favorite: Joi.boolean().messages({
+    "string.base": `favorite should be a type of boolean`,
+    "string.empty": `favorite must contain value`,
+  }),
 }).required();
 
-module.exports = {
+const statusSchema = Joi.object({
+  favorite: Joi.boolean().required().messages({
+    "string.base": `favorite should be a type of boolean`,
+    "string.empty": `favorite must contain value`,
+    "any.required": `missing field favorite`,
+  }),
+});
+
+const schemas = {
   addSchema,
+  statusSchema,
 };
+
+const Contact = model("contact", contactSchema);
+
+module.exports = { Contact, schemas };
