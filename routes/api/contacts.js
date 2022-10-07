@@ -5,6 +5,9 @@ const ctrl = require("../../controllers/contacts");
 const { ctrlWrapper } = require("../../helpers");
 const { validateBody, isValidId } = require("../../middlewares");
 const { schemas } = require("../../models/contactModel");
+const { authenticate } = require("../../middlewares");
+
+router.use(authenticate);
 
 router.get("/", ctrlWrapper(ctrl.listContacts));
 

@@ -34,15 +34,74 @@ The API contains a full set of CRUD (Create, Read, Update, Delete) operations fo
 - `helpers/` - This folder contains the functions that allow you to optimize code creation - repeatedly apply in different places. For example to work with try/catch, to handle RequestError.
 - `middlewares/` - This folder contains any middleware needed for the application such as handle data validation
 
+## Routes
+
+/api/contacts
+@ GET /
+
+- It returns the Array of all contacts in JSON format and status 200
+
+@ GET /:contactId
+
+- It gets the contactId parameter
+- If such contactId exists, returns a contact object in JSON format and status 200
+- If there is no such contactId, returns object in JSON format {"message": "Not found"} and status 404
+
+@ POST /
+
+- It receives body in {name, email, phone} format (all fields are required)
+- If the body doesn't have any required fields, it returns a object in JSON format{"message": "missing required name field"} and status 400
+- If the body is okay, it adds a unique identifier to the contact object and saves the contact
+- It returns an object in {id, name, email, phone} format and status 201
+
+@ DELETE /:contactId
+
+- It gets contactId parameter
+- If such contactId exists, returns object in JSON format {"message": "contact deleted"} and status 200
+- If there is no such contactId, returns object in JSON format {"message": "Not found"} and status 404
+
+@ PUT /:contactId
+
+- It gets contactId parameter
+- It receives body in JSON format with any name, email and phone fields updated
+- If body is missing, it returns object in JSON format {"message": "missing fields"} and status 400
+- If body is ok, updates contact
+- It returns the updated contact object and status 200. Otherwise, it returns object in JSON format {"message": "Not found"} and status 404
+
+@ PATCH /:contactId/favorite
+
+- It gets contactId parameter
+- It gets the body in JSON format with the updated field favorite
+- If body is missing, returns object in JSON format {"message": "missing field favorite"} and status 400
+- If the body is ok, updates contact
+- It returns the updated contact object and status 200. Otherwise, it returns object in JSON format {"message": "Not found"} and status 404
+
+### Authentication
+
+/api/users
+@ POST /register
+
+- It creates a user from data that has been validated
+
+@ GET /login
+
+- It finds the user by email in the User model.
+
+@ POST /logout
+
+- It removes token from current user
+
+@ GET /current
+
+- It gets user data by token
+
+@ PATCH /
+
+- It updates the user's subscription status
+
 ## Error Handling
 
 In `middlewares/`, we define a error-handling middleware for handling Mongoose's `ValidationError`. This middleware will respond with a 400 status code and format the response to have error messages the clients can understand
-
-## Authentication
-
-app.js - web server on express and morgan and cors middlewares.
-
-Rautings to work with a collection of contacts:
 
 ### Commands:
 
