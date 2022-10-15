@@ -19,6 +19,7 @@ The API contains a full set of CRUD (Create, Read, Update, Delete) operations fo
 ## Routes
 
 `http://locahost:<PORT>/api/contacts`
+
 @ GET /
 
 - It returns the Array of all contacts in JSON format and status 200
@@ -61,6 +62,7 @@ The API contains a full set of CRUD (Create, Read, Update, Delete) operations fo
 ### Authentication
 
 `http://locahost:<PORT> /api/users`
+
 @ POST /register
 
 - It creates a user from data that has been validated
