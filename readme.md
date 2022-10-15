@@ -8,12 +8,12 @@ The API contains a full set of CRUD (Create, Read, Update, Delete) operations fo
 
 ## Application Structure
 
-- `server.js` - The entry point to our application. This file defines our express server and connects it to MongoDB using mongoose.
+- `server.js` - The entry point to our application. This file defines our express server and connects it to MongoDB using mongoose
 - `app.js` - This file requires routes and models that we will use in the application, as well as handling 404 error and 500 server error
-- `routes/` - This folder contains the route definitions for our API.
+- `routes/` - This folder contains the route definitions for our API
 - `models/` - This folder contains the model (service) to perform operations on the database and the schema definitions for our Mongoose models
-- `controllers/` - This file contains the basic logic of working with our API.
-- `helpers/` - This folder contains the functions that allow you to optimize code creation - repeatedly apply in different places. For example to work with try/catch, to handle RequestError.
+- `controllers/` - This file contains the basic logic of working with our API
+- `helpers/` - This folder contains the functions that allow you to optimize code creation - repeatedly apply in different places. For example to work with try/catch, to handle RequestError
 - `middlewares/` - This folder contains any middleware needed for the application such as handle data validation
 
 ## Routes
@@ -61,7 +61,7 @@ The API contains a full set of CRUD (Create, Read, Update, Delete) operations fo
 
 ### Authentication
 
-`http://locahost:<PORT> /api/users`
+`http://locahost:<PORT>/api/users`
 
 @ POST /register
 
@@ -69,7 +69,7 @@ The API contains a full set of CRUD (Create, Read, Update, Delete) operations fo
 
 @ GET /login
 
-- It finds the user by email in the User model.
+- It finds the user by email in the User model
 
 @ POST /logout
 
