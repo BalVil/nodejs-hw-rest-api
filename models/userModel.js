@@ -20,8 +20,12 @@ const userSchema = new Schema(
       default: "starter",
     },
     token: String,
+    avatarURL: {
+      type: String,
+      required: true,
+    },
   },
-  { timestamps: true }
+  { versionKey: false, timestamps: true }
 );
 
 userSchema.post("save", handleSaveErrors);

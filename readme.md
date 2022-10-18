@@ -2,41 +2,24 @@
 
 > ### REST API for working with a collection of contacts.
 
-# Getting started
-
-To get the Node server running locally:
-
-- Clone this repo
-- `npm install` to install all required dependencies
-- `npm run start:dev` to start the local server
-
 # Code Overview
 
 The API contains a full set of CRUD (Create, Read, Update, Delete) operations for our tasks: get all contacts, get one contact, add a contact, update contact information, update contact status, delete a contact.
 
-## Dependencies
-
-- [cors](https://github.com/expressjs/cors) - Node.js CORS middleware
-- [cross-env](https://github.com/kentcdodds/cross-env) - Cross platform setting of environment scripts
-- [dotenv](https://github.com/motdotla/dotenv) - Loads environment variables from .env for nodejs projects.
-- [express](https://github.com/expressjs/express) - The server for handling and routing HTTP requests
-- [joi](https://github.com/hapijs/joi) - Schema description language and data validator for JavaScript
-- [mongoose](https://github.com/Automattic/mongoose) - For modeling and mapping MongoDB data to javascript
-- [morgan](https://github.com/expressjs/morgan) - HTTP request logger middleware for node.js
-
 ## Application Structure
 
-- `server.js` - The entry point to our application. This file defines our express server and connects it to MongoDB using mongoose.
+- `server.js` - The entry point to our application. This file defines our express server and connects it to MongoDB using mongoose
 - `app.js` - This file requires routes and models that we will use in the application, as well as handling 404 error and 500 server error
-- `routes/` - This folder contains the route definitions for our API.
+- `routes/` - This folder contains the route definitions for our API
 - `models/` - This folder contains the model (service) to perform operations on the database and the schema definitions for our Mongoose models
-- `controllers/` - This file contains the basic logic of working with our API.
-- `helpers/` - This folder contains the functions that allow you to optimize code creation - repeatedly apply in different places. For example to work with try/catch, to handle RequestError.
+- `controllers/` - This file contains the basic logic of working with our API
+- `helpers/` - This folder contains the functions that allow you to optimize code creation - repeatedly apply in different places. For example to work with try/catch, to handle RequestError
 - `middlewares/` - This folder contains any middleware needed for the application such as handle data validation
 
 ## Routes
 
-/api/contacts
+`http://locahost:<PORT>/api/contacts`
+
 @ GET /
 
 - It returns the Array of all contacts in JSON format and status 200
@@ -78,14 +61,15 @@ The API contains a full set of CRUD (Create, Read, Update, Delete) operations fo
 
 ### Authentication
 
-/api/users
+`http://locahost:<PORT>/api/users`
+
 @ POST /register
 
 - It creates a user from data that has been validated
 
 @ GET /login
 
-- It finds the user by email in the User model.
+- It finds the user by email in the User model
 
 @ POST /logout
 
@@ -98,6 +82,24 @@ The API contains a full set of CRUD (Create, Read, Update, Delete) operations fo
 @ PATCH /
 
 - It updates the user's subscription status
+
+@ PATCH /avatars
+
+- It allows the user to change his avatar
+
+## Dependencies
+
+- [bcrypt](https://github.com/kelektiv/node.bcrypt.js) - A library to help you hash passwords.
+- [cors](https://github.com/expressjs/cors) - Node.js CORS middleware
+- [cross-env](https://github.com/kentcdodds/cross-env) - Cross platform setting of environment scripts
+- [dotenv](https://github.com/motdotla/dotenv) - Loads environment variables from .env for nodejs projects.
+- [express](https://github.com/expressjs/express) - The server for handling and routing HTTP requests
+- [gravatar](https://github.com/emerleite/node-gravatar) - library to generate the URLs required to request Gravatar Images and Profile data
+- [jimp](https://github.com/oliver-moran/jimp) - An image processing library written entirely in JavaScript for Node, with zero external or native dependencies.
+- [joi](https://github.com/hapijs/joi) - Schema description language and data validator for JavaScript
+- [mongoose](https://github.com/Automattic/mongoose) - For modeling and mapping MongoDB data to javascript
+- [morgan](https://github.com/expressjs/morgan) - HTTP request logger middleware for node.js
+- [multer](https://github.com/expressjs/multer) - Node.js middleware for handling `multipart/form-data`.
 
 ## Error Handling
 
