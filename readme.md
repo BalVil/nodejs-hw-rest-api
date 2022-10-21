@@ -67,6 +67,14 @@ The API contains a full set of CRUD (Create, Read, Update, Delete) operations fo
 
 - It creates a user from data that has been validated
 
+@ GET /verify/:verificationToken
+
+- It's used to check/confirm email verification
+
+@ POST /verify
+
+- It sends an email to the user with a link for verification (In case the user deleted the registration confirmation email by mistake or the email did not reach the addressee for some reason)
+
 @ GET /login
 
 - It finds the user by email in the User model
