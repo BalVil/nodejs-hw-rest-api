@@ -1,7 +1,7 @@
 const fs = require("fs").promises;
 const path = require("path");
 
-const UPLOAD_DIR = path.join(process.cwd(), process.env.UPLOAD_DIR);
+const UPLOAD_DIR = path.join(__dirname, "../", "tmp");
 
 const isAccessible = (path) => {
   return fs
